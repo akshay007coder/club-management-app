@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Club Management</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Club Management</h1>
+        {% if user.is_authenticated %}
+            <p>Welcome, {{ user.username }}!</p>
+        {% else %}
+            <p>Welcome, Guest!</p>
+        {% endif %}
+    </header>
+    <nav>
+        <!-- Navigation links here -->
+    </nav>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
